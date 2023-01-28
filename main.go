@@ -1,33 +1,23 @@
 package main
 
 import (
-	"fmt"
-	"os"
-
-	"github.com/graytonio/ai-dm-prep/internal/discord"
-	"github.com/graytonio/ai-dm-prep/internal/generators"
+	"github.com/graytonio/ai-dm-prep/cmd"
 )
 
-func cliUsage() {
-	inputType := os.Args[1]
-	inputRarity := os.Args[2]
+// func cliUsage() {
+// 	inputType := os.Args[1]
+// 	inputRarity := os.Args[2]
 
-	item, err := generators.GenerateItem(inputType, inputRarity)
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-	}
-
-	fmt.Println(item)
-}
-
-// func init() {
-// 	err := godotenv.Load()
+// 	item, err := generators.GenerateItem(inputType, inputRarity)
 // 	if err != nil {
-// 		logrus.Fatalln("Error loading .env file", err)
+// 		fmt.Println(err)
+// 		os.Exit(1)
 // 	}
+
+// 	fmt.Println(item)
 // }
 
 func main() {
-	discord.StartServer()
+	// discord.StartServer()
+	cmd.Execute()
 }
