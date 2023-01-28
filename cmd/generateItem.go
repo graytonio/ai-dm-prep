@@ -25,7 +25,7 @@ var genItemCmd = &cobra.Command{
 			return err
 		}
 
-		fmt.Printf("%s: %s\n", item.ItemName, item.ItemDescription)
+		fmt.Println(item)
 		return nil
 	},
 }

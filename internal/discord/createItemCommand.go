@@ -34,7 +34,10 @@ func getItemHandler(s *discordgo.Session, i *discordgo.InteractionCreate, log *l
 	itemType := optionMap["item-type"]
 	itemRarity := optionMap["item-rarity"]
 
-	log.WithField("item-type", itemType.StringValue()).WithField("item-rarity", itemRarity.StringValue()).Info("Generating DND Item")
+	log.WithFields(logrus.Fields{
+		"item-type": itemType.StringValue(),
+		"item-rarity": itemRarity.StringValue(),
+	}).Info("Generating DND Item")
 
 	err := longRunResponse(s, i.Interaction)
 	if err != nil {
@@ -48,6 +51,6 @@ func getItemHandler(s *discordgo.Session, i *discordgo.InteractionCreate, log *l
 		editResponseEmbed(s, i.Interaction, errorEmbed(err))
 	}
 
-	log.WithField("item-type", itemType.StringValue()).WithField("item-rarity", itemRarity.StringValue()).Info("Successfully Generated DND Item")
+	log.Info("Successfully Generated DND Item")
 	editResponseEmbed(s, i.Interaction, itemEmbed(item))
 }

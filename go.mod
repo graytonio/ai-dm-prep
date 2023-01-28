@@ -9,7 +9,6 @@ require (
 	github.com/sashabaranov/go-gpt3 v0.0.0-20230112080207-81b5788cd68e
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spf13/cobra v1.6.1
-	golang.org/x/text v0.6.0
 )
 
 require (
