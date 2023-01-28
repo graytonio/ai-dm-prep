@@ -29,6 +29,6 @@ changelog:
       - '^test:'
 dockers:
   - image_templates:
-      - gcr.io/graytonio/zoltan-bot:latest
-      - gcr.io/graytonio/zoltan-bot:{{ .Tag }}
-      - gcr.io/graytonio/zoltan-bot:{{ .Major }}
+      - ghcr.io/graytonio/zoltan-bot:latest
+      - ghcr.io/graytonio/zoltan-bot:{{ .Tag }}
+      - ghcr.io/graytonio/zoltan-bot:{{ .Major }}
