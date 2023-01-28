@@ -31,4 +31,4 @@ dockers:
   - image_templates:
       - gcr.io/graytonio/zoltan-bot:latest
       - gcr.io/graytonio/zoltan-bot:{{ .Tag }}
-      - gcr.io/graytonio/zoltan-bot:{{ .Marjor }}
+      - gcr.io/graytonio/zoltan-bot:{{ .Major }}
